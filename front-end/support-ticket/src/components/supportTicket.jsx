@@ -6,6 +6,8 @@ import '../style/ticket.scss';
 
 function SupportTicket() {
 
+    const uri = process.env.NODE_ENV === 'production' ? 'https://ticket-backend-six.vercel.app' : 'http://localhost:8000/api';
+
     const currentDate = new Date().toISOString().split('T')[0];
 
     const [details, setDetails] = useState({
@@ -87,7 +89,7 @@ function SupportTicket() {
                 redirect: 'follow'
             };
 
-            fetch("http://localhost:8000/api/support-tickets", requestOptions)
+            fetch(`${uri}/support-tickets`, requestOptions)
             .then(response => response.text())
             .then(result => {
                 console.log(result)
@@ -100,7 +102,7 @@ function SupportTicket() {
     const fetchUser = async () => {
         
         try {
-            const response = await fetch('http://localhost:8000/api/assigned-users', {
+            const response = await fetch(`${uri}/assigned-users`, {
               method: 'GET',
             });
             const data = await response.json();

@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function SupportAgent() {
 
+    const uri = process.env.NODE_ENV === 'production' ? 'https://ticket-backend-six.vercel.app' : 'http://localhost:8000/api';
     const [details, setDetails] = useState({
         name: '',
         email: '',
@@ -69,7 +70,7 @@ function SupportAgent() {
                 redirect: 'follow'
             };
 
-            fetch("http://localhost:8000/api/support-agents", requestOptions)
+            fetch(`${uri}/support-agents`, requestOptions)
             .then(response => response.text())
             .then(result => {
                 console.log(result)
