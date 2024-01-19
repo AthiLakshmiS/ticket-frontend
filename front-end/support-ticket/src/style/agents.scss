@@ -1,0 +1,65 @@
+.agent-creation {
+    display: grid;
+    grid-template-columns: repeat(3, 271px);
+    row-gap: 60px;
+    margin-top: 47px;
+    .agents-details {
+        display: grid;
+        align-content: stretch;
+        justify-content: start;
+    }
+    label {
+        font-family: 'poppins-regular';
+        font-size: 14px;
+        color: #7d6f6f;    
+    }
+    input {
+        border: none;
+        margin-top: 8px;
+        color: #000000;
+        font-family: 'poppins-medium';
+        font-size: 13px;
+        outline: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+    textarea {
+        border: none;
+        margin-top: 8px;
+        color: #000000;
+        font-family: 'poppins-medium';
+        font-size: 13px;
+        outline: none;
+        border: 1px solid #eeeeee;
+        border-radius: 10px;
+        width: 440px;
+        height: 100px;
+    }
+    input:-internal-autofill-selected {
+        background-color: transparent !important;
+    }
+    .required {
+        color: red;
+        margin-left: 4px; /* Add some space between the label text and the asterisk */
+    }
+}
+.website {
+    h3 {
+        margin: 45px 0px;
+        font-family: 'poppins-semibold';
+        font-size: 22px;
+    }
+}
+.submit-button {
+    margin: 80px;
+    text-align: center;
+    button {
+        background-color: #227dab;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'poppins-regular';
+        border: 1px solid #227dab;
+        padding: 10px 45px;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+}

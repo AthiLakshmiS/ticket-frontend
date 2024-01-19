@@ -1,0 +1,25 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-right: 1px solid #d4cece96;
+    background-color: #227dab;
+    color: #ffffff;
+    h2 {
+        font-family: "poppins-medium";
+        font-size: 17px;
+        margin: 48px 19px;
+    }
+    .sub-page-container {
+        margin: 4px 21px;
+        display: grid;
+        gap: 28px;
+        justify-items: center;    
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: "poppins-regular";
+        font-size: 14px;
+    }
+}
