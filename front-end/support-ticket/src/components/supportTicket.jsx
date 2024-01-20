@@ -6,7 +6,7 @@ import '../style/ticket.scss';
 
 function SupportTicket() {
 
-    const uri = process.env.NODE_ENV === 'production' ? 'https://ticket-backend-six.vercel.app' : 'http://localhost:3000/api';
+    const apiUrlVite = import.meta.env.VITE_API_URL;
 
     const currentDate = new Date().toISOString().split('T')[0];
 
@@ -88,8 +88,9 @@ function SupportTicket() {
                 body: raw,
                 redirect: 'follow'
             };
+            const apiUrl = `${apiUrlVite}/support-tickets`;
 
-            fetch(`${uri}/support-tickets`, requestOptions)
+            fetch(apiUrl, requestOptions)
             .then(response => response.text())
             .then(result => {
                 console.log(result)
@@ -100,9 +101,9 @@ function SupportTicket() {
     }
 
     const fetchUser = async () => {
-        
+        const apiUrl = `${apiUrlVite}/assigned-users`;
         try {
-            const response = await fetch(`${uri}/assigned-users`, {
+            const response = await fetch(apiUrl, {
               method: 'GET',
             });
             const data = await response.json();
