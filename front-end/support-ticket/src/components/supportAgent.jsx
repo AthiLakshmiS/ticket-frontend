@@ -76,7 +76,15 @@ function SupportAgent() {
             .then(response => response.text())
             .then(result => {
                 console.log(result)
-                toast.success('User Agent Created')
+                toast.success('User Agent Created');
+                setDetails({
+                    ...details,
+                    name: '',
+                    email: '',
+                    phone: '',
+                    description: '',
+                    active: true
+                })
             })
             .catch(error => console.log('error', error));
         }

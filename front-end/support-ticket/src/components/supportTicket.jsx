@@ -95,6 +95,17 @@ function SupportTicket() {
             .then(result => {
                 console.log(result)
                 toast.success('Ticket Created');
+                setDetails({
+                    ...details,
+                    topic: '',
+                    dateCreated: currentDate,
+                    severity: '',
+                    type: '',
+                    assignedTo: '',
+                    status: 'New',
+                    resolvedOn: '',
+                    description: ''
+                })
             })
             .catch(error => console.log('error', error));       
         }
