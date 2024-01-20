@@ -6,7 +6,7 @@ import '../style/ticket.scss';
 
 function SupportTicket() {
 
-    const uri = process.env.NODE_ENV === 'production' ? 'https://ticket-backend-six.vercel.app' : 'http://localhost:8000/api';
+    const uri = process.env.NODE_ENV === 'production' ? 'https://ticket-backend-six.vercel.app' : 'http://localhost:3000/api';
 
     const currentDate = new Date().toISOString().split('T')[0];
 

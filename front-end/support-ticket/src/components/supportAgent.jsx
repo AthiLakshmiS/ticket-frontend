@@ -70,7 +70,7 @@ function SupportAgent() {
                 redirect: 'follow'
             };
 
-            fetch(`${uri}/support-agents`, requestOptions)
+            fetch("http://localhost:3000/api/support-agents", requestOptions)
             .then(response => response.text())
             .then(result => {
                 console.log(result)
@@ -91,7 +91,7 @@ function SupportAgent() {
             </div>
             <div>
                 <h3>Support Agent Creation</h3>
-                {/* <div className="agent-creation">
+                <div className="agent-creation">
                     <div className="agents-details">
                         <label>
                             Name 
@@ -119,7 +119,7 @@ function SupportAgent() {
                         </label>
                         <textarea type="text" name="description" value={details.description} onChange={(e) => updateDetails(e.target)}></textarea>
                     </div>
-                </div> */}
+                </div>
                 <div className="submit-button">
                     <button onClick={(e) => submitDetails(e)}>Create Agent</button>
                 </div>

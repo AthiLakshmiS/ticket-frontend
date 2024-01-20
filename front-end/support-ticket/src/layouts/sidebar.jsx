@@ -7,9 +7,9 @@ function Sidebar() {
         <div className="sidebar-container">
             <h2>Tickets</h2>
             <div className="sub-page-container">
-                <a href="/">
+                {/* <a href="/">
                     Task 
-                </a>
+                </a> */}
                 <a href="/agent">
                     Agents
                 </a>
