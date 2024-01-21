@@ -69,7 +69,7 @@ function SupportTask() {
                                         <td>{data.assignedTo ? data.assignedTo : '-'}</td>
                                         <td>{data.severity ? data.severity : '-'}</td>
                                         <td>{data.type ? data.type : '-'}</td>
-                                        <td>{data.resolvedOn ? data.resolvedOn : '-'}</td>
+                                        <td>{data.resolvedOn ? moment(data.resolvedOn).format('MMMM DD, YYYY') : '-'}</td>
                                         <td>{data.dateCreated ? moment(data.dateCreated).format('MMMM DD, YYYY') : '-'}</td>
                                     </tr>
                                 )
